@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prediction-app
+spec:
+  selector:
+    matchLabels:
+      app: prediction-app
+  template:
+    metadata:
+      labels:
+        app: prediction-app
+    spec:
+      containers:
+      - name: prediction-app
+        image: ramesh9394/price-prediction:v1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
