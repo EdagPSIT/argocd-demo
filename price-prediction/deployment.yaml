@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: prediction-app
 spec:
-  replica: 4
+  replicas: 4
   selector:
     matchLabels:
       app: prediction-app
